@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		222132F52B9E83AB00A887D7 /* DungeonsAndDragonsMonstersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222132F42B9E83AB00A887D7 /* DungeonsAndDragonsMonstersUITests.swift */; };
 		222132F72B9E83AB00A887D7 /* DungeonsAndDragonsMonstersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222132F62B9E83AB00A887D7 /* DungeonsAndDragonsMonstersUITestsLaunchTests.swift */; };
 		222133052B9E850100A887D7 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 222133042B9E850100A887D7 /* Apollo */; };
+		2221330C2B9E8E1F00A887D7 /* DnD5eAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 2221330B2B9E8E1F00A887D7 /* DnD5eAPI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2221330C2B9E8E1F00A887D7 /* DnD5eAPI in Frameworks */,
 				222133052B9E850100A887D7 /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,6 +149,7 @@
 			name = DungeonsAndDragonsMonsters;
 			packageProductDependencies = (
 				222133042B9E850100A887D7 /* Apollo */,
+				2221330B2B9E8E1F00A887D7 /* DnD5eAPI */,
 			);
 			productName = DungeonsAndDragonsMonsters;
 			productReference = 222132D62B9E83AA00A887D7 /* DungeonsAndDragonsMonsters.app */;
@@ -222,6 +225,7 @@
 			mainGroup = 222132CD2B9E83AA00A887D7;
 			packageReferences = (
 				222133032B9E850100A887D7 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				2221330A2B9E8E1F00A887D7 /* XCLocalSwiftPackageReference "DnD5eAPI" */,
 			);
 			productRefGroup = 222132D72B9E83AA00A887D7 /* Products */;
 			projectDirPath = "";
@@ -597,6 +601,13 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		2221330A2B9E8E1F00A887D7 /* XCLocalSwiftPackageReference "DnD5eAPI" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = DnD5eAPI;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		222133032B9E850100A887D7 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -613,6 +624,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 222133032B9E850100A887D7 /* XCRemoteSwiftPackageReference "apollo-ios" */;
 			productName = Apollo;
+		};
+		2221330B2B9E8E1F00A887D7 /* DnD5eAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DnD5eAPI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -10,7 +10,6 @@
 		222132DA2B9E83AA00A887D7 /* DungeonsAndDragonsMonstersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222132D92B9E83AA00A887D7 /* DungeonsAndDragonsMonstersApp.swift */; };
 		222132DE2B9E83AB00A887D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 222132DD2B9E83AB00A887D7 /* Assets.xcassets */; };
 		222132E12B9E83AB00A887D7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 222132E02B9E83AB00A887D7 /* Preview Assets.xcassets */; };
-		222132EB2B9E83AB00A887D7 /* DungeonsAndDragonsMonstersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222132EA2B9E83AB00A887D7 /* DungeonsAndDragonsMonstersTests.swift */; };
 		222132F52B9E83AB00A887D7 /* DungeonsAndDragonsMonstersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222132F42B9E83AB00A887D7 /* DungeonsAndDragonsMonstersUITests.swift */; };
 		222132F72B9E83AB00A887D7 /* DungeonsAndDragonsMonstersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222132F62B9E83AB00A887D7 /* DungeonsAndDragonsMonstersUITestsLaunchTests.swift */; };
 		222133052B9E850100A887D7 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 222133042B9E850100A887D7 /* Apollo */; };
@@ -55,7 +54,6 @@
 		222132DD2B9E83AB00A887D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		222132E02B9E83AB00A887D7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		222132E62B9E83AB00A887D7 /* DungeonsAndDragonsMonstersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DungeonsAndDragonsMonstersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		222132EA2B9E83AB00A887D7 /* DungeonsAndDragonsMonstersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DungeonsAndDragonsMonstersTests.swift; sourceTree = "<group>"; };
 		222132F02B9E83AB00A887D7 /* DungeonsAndDragonsMonstersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DungeonsAndDragonsMonstersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		222132F42B9E83AB00A887D7 /* DungeonsAndDragonsMonstersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DungeonsAndDragonsMonstersUITests.swift; sourceTree = "<group>"; };
 		222132F62B9E83AB00A887D7 /* DungeonsAndDragonsMonstersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DungeonsAndDragonsMonstersUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -150,7 +148,6 @@
 		222132E92B9E83AB00A887D7 /* DungeonsAndDragonsMonstersTests */ = {
 			isa = PBXGroup;
 			children = (
-				222132EA2B9E83AB00A887D7 /* DungeonsAndDragonsMonstersTests.swift */,
 				222133212B9F45D000A887D7 /* MonstersListViewModelTests.swift */,
 				2221332D2B9F679300A887D7 /* AbilityScoreTests.swift */,
 				222133232B9F49E600A887D7 /* ApolloClient+Mock.swift */,
@@ -381,7 +378,6 @@
 			files = (
 				222133242B9F49E600A887D7 /* ApolloClient+Mock.swift in Sources */,
 				222133222B9F45D000A887D7 /* MonstersListViewModelTests.swift in Sources */,
-				222132EB2B9E83AB00A887D7 /* DungeonsAndDragonsMonstersTests.swift in Sources */,
 				2221332E2B9F679300A887D7 /* AbilityScoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

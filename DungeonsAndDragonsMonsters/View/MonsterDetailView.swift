@@ -89,16 +89,19 @@ struct MonsterDetailView: View {
                         .bold()
                     Text(monster.alignment.capitalized)
                 }
+                Divider()
                 GridRow {
                     Text("Size")
                         .bold()
                     Text(monster.size.rawValue.capitalized)
                 }
+                Divider()
                 GridRow {
                     Text("Type")
                         .bold()
                     Text(monster.type.rawValue.capitalized)
                 }
+                Divider()
             }
             if let description = monster.description {
                 Text(description)

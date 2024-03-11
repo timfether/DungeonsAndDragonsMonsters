@@ -36,7 +36,8 @@ extension MonstersListView {
         }
         
         func fetchMonsters() {
-            apolloClient.fetch(query: MonsterQuery(limit: .numberOfMonstersToFetchEachTime, skip: GraphQLNullable(integerLiteral: numberOfMonstersRequested))) { [weak self] result in
+            apolloClient.fetch(query: MonsterQuery(limit: .numberOfMonstersToFetchEachTime, 
+                                                   skip: GraphQLNullable(integerLiteral: numberOfMonstersRequested))) { [weak self] result in
                 guard let self else { return }
                 switch result {
                 case .success(let result):

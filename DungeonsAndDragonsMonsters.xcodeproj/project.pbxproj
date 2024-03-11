@@ -26,6 +26,9 @@
 		222133242B9F49E600A887D7 /* ApolloClient+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222133232B9F49E600A887D7 /* ApolloClient+Mock.swift */; };
 		222133262B9F5D1100A887D7 /* MonsterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222133252B9F5D1100A887D7 /* MonsterDetailView.swift */; };
 		222133282B9F5E8C00A887D7 /* ApolloUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222133272B9F5E8C00A887D7 /* ApolloUtilities.swift */; };
+		2221332A2B9F669300A887D7 /* Monster+Abilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222133292B9F669300A887D7 /* Monster+Abilities.swift */; };
+		2221332C2B9F66F000A887D7 /* AbilityScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2221332B2B9F66F000A887D7 /* AbilityScore.swift */; };
+		2221332E2B9F679300A887D7 /* AbilityScoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2221332D2B9F679300A887D7 /* AbilityScoreTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +67,9 @@
 		222133232B9F49E600A887D7 /* ApolloClient+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApolloClient+Mock.swift"; sourceTree = "<group>"; };
 		222133252B9F5D1100A887D7 /* MonsterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterDetailView.swift; sourceTree = "<group>"; };
 		222133272B9F5E8C00A887D7 /* ApolloUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloUtilities.swift; sourceTree = "<group>"; };
+		222133292B9F669300A887D7 /* Monster+Abilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Monster+Abilities.swift"; sourceTree = "<group>"; };
+		2221332B2B9F66F000A887D7 /* AbilityScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityScore.swift; sourceTree = "<group>"; };
+		2221332D2B9F679300A887D7 /* AbilityScoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityScoreTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +132,8 @@
 				222133252B9F5D1100A887D7 /* MonsterDetailView.swift */,
 				2221331F2B9F44C000A887D7 /* ApolloClientProviding.swift */,
 				222133272B9F5E8C00A887D7 /* ApolloUtilities.swift */,
+				222133292B9F669300A887D7 /* Monster+Abilities.swift */,
+				2221332B2B9F66F000A887D7 /* AbilityScore.swift */,
 				222132DD2B9E83AB00A887D7 /* Assets.xcassets */,
 				222132DF2B9E83AB00A887D7 /* Preview Content */,
 			);
@@ -145,6 +153,7 @@
 			children = (
 				222132EA2B9E83AB00A887D7 /* DungeonsAndDragonsMonstersTests.swift */,
 				222133212B9F45D000A887D7 /* MonstersListViewModelTests.swift */,
+				2221332D2B9F679300A887D7 /* AbilityScoreTests.swift */,
 				222133232B9F49E600A887D7 /* ApolloClient+Mock.swift */,
 			);
 			path = DungeonsAndDragonsMonstersTests;
@@ -320,10 +329,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				222133172B9F3CD300A887D7 /* MonstersListView.swift in Sources */,
+				2221332A2B9F669300A887D7 /* Monster+Abilities.swift in Sources */,
 				222132DA2B9E83AA00A887D7 /* DungeonsAndDragonsMonstersApp.swift in Sources */,
 				222133202B9F44C000A887D7 /* ApolloClientProviding.swift in Sources */,
 				222133192B9F3D6800A887D7 /* MonstersListViewModel.swift in Sources */,
 				222133282B9F5E8C00A887D7 /* ApolloUtilities.swift in Sources */,
+				2221332C2B9F66F000A887D7 /* AbilityScore.swift in Sources */,
 				222133262B9F5D1100A887D7 /* MonsterDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,6 +346,7 @@
 				222133242B9F49E600A887D7 /* ApolloClient+Mock.swift in Sources */,
 				222133222B9F45D000A887D7 /* MonstersListViewModelTests.swift in Sources */,
 				222132EB2B9E83AB00A887D7 /* DungeonsAndDragonsMonstersTests.swift in Sources */,
+				2221332E2B9F679300A887D7 /* AbilityScoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -4,12 +4,12 @@ query MonsterQuery($limit: Int!, $skip: Int) {
     name
     imagePath: image
 
-    strength
-    dexterity
-    constitution
-    intelligence
-    wisdom
-    charisma
+    strengthScore: strength
+    dexterityScore: dexterity
+    constitutionScore: constitution
+    intelligenceScore: intelligence
+    wisdomScore: wisdom
+    charismaScore: charisma
 
     description: desc
     alignment

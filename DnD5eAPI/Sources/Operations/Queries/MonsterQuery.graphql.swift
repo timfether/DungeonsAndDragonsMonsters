@@ -7,7 +7,7 @@ public class MonsterQuery: GraphQLQuery {
   public static let operationName: String = "MonsterQuery"
   public static let operationDocument: ApolloAPI.OperationDocument = .init(
     definition: .init(
-      #"query MonsterQuery($limit: Int!, $skip: Int) { monsters(limit: $limit, skip: $skip) { __typename index name imagePath: image strength dexterity constitution intelligence wisdom charisma description: desc alignment size type } }"#
+      #"query MonsterQuery($limit: Int!, $skip: Int) { monsters(limit: $limit, skip: $skip) { __typename index name imagePath: image strengthScore: strength dexterityScore: dexterity constitutionScore: constitution intelligenceScore: intelligence wisdomScore: wisdom charismaScore: charisma description: desc alignment size type } }"#
     ))
 
   public var limit: Int
@@ -53,12 +53,12 @@ public class MonsterQuery: GraphQLQuery {
         .field("index", String.self),
         .field("name", String.self),
         .field("image", alias: "imagePath", String?.self),
-        .field("strength", Int.self),
-        .field("dexterity", Int.self),
-        .field("constitution", Int.self),
-        .field("intelligence", Int.self),
-        .field("wisdom", Int.self),
-        .field("charisma", Int.self),
+        .field("strength", alias: "strengthScore", Int.self),
+        .field("dexterity", alias: "dexterityScore", Int.self),
+        .field("constitution", alias: "constitutionScore", Int.self),
+        .field("intelligence", alias: "intelligenceScore", Int.self),
+        .field("wisdom", alias: "wisdomScore", Int.self),
+        .field("charisma", alias: "charismaScore", Int.self),
         .field("desc", alias: "description", String?.self),
         .field("alignment", String.self),
         .field("size", GraphQLEnum<DnD5eAPI.Size>.self),
@@ -68,12 +68,12 @@ public class MonsterQuery: GraphQLQuery {
       public var index: String { __data["index"] }
       public var name: String { __data["name"] }
       public var imagePath: String? { __data["imagePath"] }
-      public var strength: Int { __data["strength"] }
-      public var dexterity: Int { __data["dexterity"] }
-      public var constitution: Int { __data["constitution"] }
-      public var intelligence: Int { __data["intelligence"] }
-      public var wisdom: Int { __data["wisdom"] }
-      public var charisma: Int { __data["charisma"] }
+      public var strengthScore: Int { __data["strengthScore"] }
+      public var dexterityScore: Int { __data["dexterityScore"] }
+      public var constitutionScore: Int { __data["constitutionScore"] }
+      public var intelligenceScore: Int { __data["intelligenceScore"] }
+      public var wisdomScore: Int { __data["wisdomScore"] }
+      public var charismaScore: Int { __data["charismaScore"] }
       public var description: String? { __data["description"] }
       public var alignment: String { __data["alignment"] }
       public var size: GraphQLEnum<DnD5eAPI.Size> { __data["size"] }

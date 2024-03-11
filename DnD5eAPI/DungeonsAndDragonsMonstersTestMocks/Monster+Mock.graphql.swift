@@ -11,50 +11,50 @@ public class Monster: MockObject {
 
   public struct MockFields {
     @Field<String>("alignment") public var alignment
-    @Field<Int>("charisma") public var charisma
-    @Field<Int>("constitution") public var constitution
+    @Field<Int>("charismaScore") public var charismaScore
+    @Field<Int>("constitutionScore") public var constitutionScore
     @Field<String>("description") public var description
-    @Field<Int>("dexterity") public var dexterity
+    @Field<Int>("dexterityScore") public var dexterityScore
     @Field<String>("imagePath") public var imagePath
     @Field<String>("index") public var index
-    @Field<Int>("intelligence") public var intelligence
+    @Field<Int>("intelligenceScore") public var intelligenceScore
     @Field<String>("name") public var name
     @Field<GraphQLEnum<DnD5eAPI.Size>>("size") public var size
-    @Field<Int>("strength") public var strength
+    @Field<Int>("strengthScore") public var strengthScore
     @Field<GraphQLEnum<DnD5eAPI.MonsterType>>("type") public var type
-    @Field<Int>("wisdom") public var wisdom
+    @Field<Int>("wisdomScore") public var wisdomScore
   }
 }
 
 public extension Mock where O == Monster {
   convenience init(
     alignment: String? = nil,
-    charisma: Int? = nil,
-    constitution: Int? = nil,
+    charismaScore: Int? = nil,
+    constitutionScore: Int? = nil,
     description: String? = nil,
-    dexterity: Int? = nil,
+    dexterityScore: Int? = nil,
     imagePath: String? = nil,
     index: String? = nil,
-    intelligence: Int? = nil,
+    intelligenceScore: Int? = nil,
     name: String? = nil,
     size: GraphQLEnum<DnD5eAPI.Size>? = nil,
-    strength: Int? = nil,
+    strengthScore: Int? = nil,
     type: GraphQLEnum<DnD5eAPI.MonsterType>? = nil,
-    wisdom: Int? = nil
+    wisdomScore: Int? = nil
   ) {
     self.init()
     _setScalar(alignment, for: \.alignment)
-    _setScalar(charisma, for: \.charisma)
-    _setScalar(constitution, for: \.constitution)
+    _setScalar(charismaScore, for: \.charismaScore)
+    _setScalar(constitutionScore, for: \.constitutionScore)
     _setScalar(description, for: \.description)
-    _setScalar(dexterity, for: \.dexterity)
+    _setScalar(dexterityScore, for: \.dexterityScore)
     _setScalar(imagePath, for: \.imagePath)
     _setScalar(index, for: \.index)
-    _setScalar(intelligence, for: \.intelligence)
+    _setScalar(intelligenceScore, for: \.intelligenceScore)
     _setScalar(name, for: \.name)
     _setScalar(size, for: \.size)
-    _setScalar(strength, for: \.strength)
+    _setScalar(strengthScore, for: \.strengthScore)
     _setScalar(type, for: \.type)
-    _setScalar(wisdom, for: \.wisdom)
+    _setScalar(wisdomScore, for: \.wisdomScore)
   }
 }

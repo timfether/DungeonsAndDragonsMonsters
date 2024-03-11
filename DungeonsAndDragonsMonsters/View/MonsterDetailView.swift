@@ -10,7 +10,6 @@ import DnD5eAPI
 
 fileprivate extension CGFloat {
     static var imageHeight: CGFloat { 300.0 }
-    
 }
 
 struct MonsterDetailView: View {

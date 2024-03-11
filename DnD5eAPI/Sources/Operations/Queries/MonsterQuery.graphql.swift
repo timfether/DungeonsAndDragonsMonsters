@@ -7,7 +7,7 @@ public class MonsterQuery: GraphQLQuery {
   public static let operationName: String = "MonsterQuery"
   public static let operationDocument: ApolloAPI.OperationDocument = .init(
     definition: .init(
-      #"query MonsterQuery($limit: Int!, $skip: Int) { monsters(limit: $limit, skip: $skip) { __typename index name strength dexterity constitution intelligence wisdom charisma description: desc alignment size type } }"#
+      #"query MonsterQuery($limit: Int!, $skip: Int) { monsters(limit: $limit, skip: $skip) { __typename index name imagePath: image strength dexterity constitution intelligence wisdom charisma description: desc alignment size type } }"#
     ))
 
   public var limit: Int
@@ -52,6 +52,7 @@ public class MonsterQuery: GraphQLQuery {
         .field("__typename", String.self),
         .field("index", String.self),
         .field("name", String.self),
+        .field("image", alias: "imagePath", String?.self),
         .field("strength", Int.self),
         .field("dexterity", Int.self),
         .field("constitution", Int.self),
@@ -66,6 +67,7 @@ public class MonsterQuery: GraphQLQuery {
 
       public var index: String { __data["index"] }
       public var name: String { __data["name"] }
+      public var imagePath: String? { __data["imagePath"] }
       public var strength: Int { __data["strength"] }
       public var dexterity: Int { __data["dexterity"] }
       public var constitution: Int { __data["constitution"] }

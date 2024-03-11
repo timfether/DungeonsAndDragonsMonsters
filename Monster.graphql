@@ -1,0 +1,18 @@
+query MonsterQuery($limit: Int!, $skip: Int) {
+  monsters(limit: $limit, skip: $skip) {
+    index
+    name
+
+    strength
+    dexterity
+    constitution
+    intelligence
+    wisdom
+    charisma
+
+    desc
+    alignment
+    size
+    type
+  }
+}

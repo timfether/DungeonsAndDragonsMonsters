@@ -27,7 +27,6 @@ extension URL {
         guard let imagePath = monster.imagePath else {
             return nil
         }
-        print(URL.baseURL.appending(path: imagePath))
         return URL.baseURL.appending(path: imagePath)
     }
 }

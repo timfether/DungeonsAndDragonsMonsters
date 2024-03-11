@@ -29,7 +29,7 @@ extension MonstersListView {
         }
         
         func fetchMonsters() {
-            apolloClient.fetch(query: MonsterQuery(limit: .numberOfMonstersToFetchEachTime, 
+            apolloClient.fetch(query: MonsterQuery(limit: .numberOfMonstersToFetchEachTime,
                                                    skip: GraphQLNullable(integerLiteral: numberOfMonstersRequested))) { [weak self] result in
                 guard let self else { return }
                 switch result {
@@ -41,13 +41,18 @@ extension MonstersListView {
                     self.monsters += monsters
                 case .failure(let error):
                     self.fetchError = error
+                    self.numberOfMonstersRequested = monsters.count
                 }
             }
             numberOfMonstersRequested += .numberOfMonstersToFetchEachTime
         }
         
-        func rowAppearedForMonster(withIndex index: String) {
-            if index == monsters[monsters.endIndex - .numberOfMonstersToHaveRemainingBeforeFetchingMore].index {
+        func rowAppearedForMonster(withIndex uniqueIdentifyingindex: String) {
+            guard let integerIndexOfMonsterThatAppeared = monsters.firstIndex(where: { $0.index == uniqueIdentifyingindex }) else {
+                assertionFailure("monster with provided index should exist")
+                return
+            }
+            if integerIndexOfMonsterThatAppeared >= numberOfMonstersRequested - .numberOfMonstersToHaveRemainingBeforeFetchingMore - 1 {
                 fetchMonsters()
             }
         }

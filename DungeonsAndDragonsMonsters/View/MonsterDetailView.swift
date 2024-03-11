@@ -63,7 +63,6 @@ struct MonsterDetailView: View {
                 .foregroundStyle(Color(UIColor(white: 0.5, alpha: 1.0)))
             }
             .frame(height: .imageHeight)
-            
         }
     }
     
@@ -85,30 +84,28 @@ struct MonsterDetailView: View {
             .fixedSize()
         VStack(alignment: .leading, spacing: 8.0) {
             Grid(alignment: .leading, horizontalSpacing: 16.0) {
-                GridRow {
-                    Text("Alignment")
-                        .bold()
-                    Text(monster.alignment.capitalized)
+                ForEach(statisticsConfiguration, id: \.label) { configuration in
+                    GridRow {
+                        Text(configuration.label).bold()
+                        Text(configuration.value)
+                    }
+                    Divider()
                 }
-                Divider()
-                GridRow {
-                    Text("Size")
-                        .bold()
-                    Text(monster.size.rawValue.capitalized)
-                }
-                Divider()
-                GridRow {
-                    Text("Type")
-                        .bold()
-                    Text(monster.type.rawValue.capitalized)
-                }
-                Divider()
             }
             if let description = monster.description {
                 Text(description)
                     .frame(idealWidth: 200.0)
             }
         }
+        
+    }
+
+    private var statisticsConfiguration: [(label: String, value: String)] {
+        return [
+            ("Alignment", monster.alignment.capitalized),
+            ("Size", monster.size.rawValue.capitalized),
+            ("Type", monster.type.rawValue.capitalized)
+        ]
     }
     
 }

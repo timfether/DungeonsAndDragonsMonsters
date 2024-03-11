@@ -18,37 +18,20 @@ struct MonsterDetailView: View {
         ScrollView {
             VStack {
                 monsterImage
-                HStack(alignment: .top, spacing: 20.0) {
-                    abilitiesView
-                        .fixedSize()
-                    VStack(alignment: .leading, spacing: 8.0) {
-                        Grid(alignment: .leading, horizontalSpacing: 16.0) {
-                            GridRow {
-                                Text("Alignment")
-                                    .bold()
-                                Text(monster.alignment.capitalized)
-                            }
-                            GridRow {
-                                Text("Size")
-                                    .bold()
-                                Text(monster.size.rawValue.capitalized)
-                            }
-                            GridRow {
-                                Text("Type")
-                                    .bold()
-                                Text(monster.type.rawValue.capitalized)
-                            }
-                        }
-                        if let description = monster.description {
-                            Text(description)
-                        }
+                ViewThatFits(in: .horizontal) {
+                    HStack(alignment: .top, spacing: 20.0) {
+                        statisticsView
+                        Spacer()
                     }
-                    Spacer()
+                    VStack(alignment: .leading) {
+                        statisticsView
+                    }
                 }
                 .padding(.horizontal)
             }
         }
         .navigationTitle(monster.name)
+        .containerRelativeFrame(.horizontal)
     }
     
     var placeholderImage: some View {
@@ -92,6 +75,35 @@ struct MonsterDetailView: View {
             AbilityView(abilityScore: monster.intelligence)
             AbilityView(abilityScore: monster.wisdom)
             AbilityView(abilityScore: monster.charisma)
+        }
+    }
+    
+    @ViewBuilder
+    var statisticsView: some View {
+        abilitiesView
+            .fixedSize()
+        VStack(alignment: .leading, spacing: 8.0) {
+            Grid(alignment: .leading, horizontalSpacing: 16.0) {
+                GridRow {
+                    Text("Alignment")
+                        .bold()
+                    Text(monster.alignment.capitalized)
+                }
+                GridRow {
+                    Text("Size")
+                        .bold()
+                    Text(monster.size.rawValue.capitalized)
+                }
+                GridRow {
+                    Text("Type")
+                        .bold()
+                    Text(monster.type.rawValue.capitalized)
+                }
+            }
+            if let description = monster.description {
+                Text(description)
+                    .frame(idealWidth: 200.0)
+            }
         }
     }
     

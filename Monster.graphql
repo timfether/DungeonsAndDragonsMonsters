@@ -10,7 +10,7 @@ query MonsterQuery($limit: Int!, $skip: Int) {
     wisdom
     charisma
 
-    desc
+    description: desc
     alignment
     size
     type

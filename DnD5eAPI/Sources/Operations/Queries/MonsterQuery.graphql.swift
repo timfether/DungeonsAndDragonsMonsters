@@ -7,7 +7,7 @@ public class MonsterQuery: GraphQLQuery {
   public static let operationName: String = "MonsterQuery"
   public static let operationDocument: ApolloAPI.OperationDocument = .init(
     definition: .init(
-      #"query MonsterQuery($limit: Int!, $skip: Int) { monsters(limit: $limit, skip: $skip) { __typename index name strength dexterity constitution intelligence wisdom charisma desc alignment size type } }"#
+      #"query MonsterQuery($limit: Int!, $skip: Int) { monsters(limit: $limit, skip: $skip) { __typename index name strength dexterity constitution intelligence wisdom charisma description: desc alignment size type } }"#
     ))
 
   public var limit: Int
@@ -58,7 +58,7 @@ public class MonsterQuery: GraphQLQuery {
         .field("intelligence", Int.self),
         .field("wisdom", Int.self),
         .field("charisma", Int.self),
-        .field("desc", String?.self),
+        .field("desc", alias: "description", String?.self),
         .field("alignment", String.self),
         .field("size", GraphQLEnum<DnD5eAPI.Size>.self),
         .field("type", GraphQLEnum<DnD5eAPI.MonsterType>.self),
@@ -72,7 +72,7 @@ public class MonsterQuery: GraphQLQuery {
       public var intelligence: Int { __data["intelligence"] }
       public var wisdom: Int { __data["wisdom"] }
       public var charisma: Int { __data["charisma"] }
-      public var desc: String? { __data["desc"] }
+      public var description: String? { __data["description"] }
       public var alignment: String { __data["alignment"] }
       public var size: GraphQLEnum<DnD5eAPI.Size> { __data["size"] }
       public var type: GraphQLEnum<DnD5eAPI.MonsterType> { __data["type"] }

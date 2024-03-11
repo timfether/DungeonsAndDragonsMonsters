@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import DnD5eAPI
 
 struct MonstersListView: View {
     @State private var viewModel = ViewModel()
@@ -15,12 +16,17 @@ struct MonstersListView: View {
     var body: some View {
         NavigationStack(path: $navigationPath) {
             List(viewModel.monsters, id: \.index) { monster in
-                Text(monster.name)
-                    .onAppear {
-                        viewModel.rowAppearedForMonster(withIndex: monster.index)
-                    }
+                NavigationLink(value: monster) {
+                    Text(monster.name)
+                        .onAppear {
+                            viewModel.rowAppearedForMonster(withIndex: monster.index)
+                        }
+                }
             }
             .navigationTitle("Monsters")
+            .navigationDestination(for: MonsterQuery.Data.Monster.self) {
+                Text($0.name)
+            }
         }
     }
 }

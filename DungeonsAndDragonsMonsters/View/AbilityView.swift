@@ -23,7 +23,7 @@ struct AbilityView: View {
                     Ellipse()
                         .fill(.white)
                         .stroke(.black)
-                        .frame(minWidth: 35.0)
+                        .aspectRatio(2.0, contentMode: .fill)
                 )
                 .offset(x: 0, y: 2)
         }

@@ -16,6 +16,8 @@
 		222132F72B9E83AB00A887D7 /* DungeonsAndDragonsMonstersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222132F62B9E83AB00A887D7 /* DungeonsAndDragonsMonstersUITestsLaunchTests.swift */; };
 		222133052B9E850100A887D7 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 222133042B9E850100A887D7 /* Apollo */; };
 		2221330C2B9E8E1F00A887D7 /* DnD5eAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 2221330B2B9E8E1F00A887D7 /* DnD5eAPI */; };
+		222133142B9F36DB00A887D7 /* Monster.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 222133122B9F36DB00A887D7 /* Monster.graphql */; };
+		222133152B9F36DB00A887D7 /* schema.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = 222133132B9F36DB00A887D7 /* schema.graphqls */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		222132F02B9E83AB00A887D7 /* DungeonsAndDragonsMonstersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DungeonsAndDragonsMonstersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		222132F42B9E83AB00A887D7 /* DungeonsAndDragonsMonstersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DungeonsAndDragonsMonstersUITests.swift; sourceTree = "<group>"; };
 		222132F62B9E83AB00A887D7 /* DungeonsAndDragonsMonstersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DungeonsAndDragonsMonstersUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		222133122B9F36DB00A887D7 /* Monster.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Monster.graphql; sourceTree = "<group>"; };
+		222133132B9F36DB00A887D7 /* schema.graphqls */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = schema.graphqls; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				222132D82B9E83AA00A887D7 /* DungeonsAndDragonsMonsters */,
+				2221330D2B9F36A000A887D7 /* GraphQL */,
 				222132E92B9E83AB00A887D7 /* DungeonsAndDragonsMonstersTests */,
 				222132F32B9E83AB00A887D7 /* DungeonsAndDragonsMonstersUITests */,
 				222132D72B9E83AA00A887D7 /* Products */,
@@ -129,6 +134,15 @@
 				222132F62B9E83AB00A887D7 /* DungeonsAndDragonsMonstersUITestsLaunchTests.swift */,
 			);
 			path = DungeonsAndDragonsMonstersUITests;
+			sourceTree = "<group>";
+		};
+		2221330D2B9F36A000A887D7 /* GraphQL */ = {
+			isa = PBXGroup;
+			children = (
+				222133122B9F36DB00A887D7 /* Monster.graphql */,
+				222133132B9F36DB00A887D7 /* schema.graphqls */,
+			);
+			path = GraphQL;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +258,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				222132E12B9E83AB00A887D7 /* Preview Assets.xcassets in Resources */,
+				222133142B9F36DB00A887D7 /* Monster.graphql in Resources */,
+				222133152B9F36DB00A887D7 /* schema.graphqls in Resources */,
 				222132DE2B9E83AB00A887D7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

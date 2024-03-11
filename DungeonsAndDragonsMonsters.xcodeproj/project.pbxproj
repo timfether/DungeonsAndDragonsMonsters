@@ -19,6 +19,8 @@
 		222133152B9F36DB00A887D7 /* schema.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = 222133132B9F36DB00A887D7 /* schema.graphqls */; };
 		222133172B9F3CD300A887D7 /* MonstersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222133162B9F3CD300A887D7 /* MonstersListView.swift */; };
 		222133192B9F3D6800A887D7 /* MonstersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222133182B9F3D6800A887D7 /* MonstersListViewModel.swift */; };
+		2221331C2B9F42DE00A887D7 /* ApolloTestSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 2221331B2B9F42DE00A887D7 /* ApolloTestSupport */; };
+		2221331E2B9F42DE00A887D7 /* DungeonsAndDragonsMonstersTestMocks in Frameworks */ = {isa = PBXBuildFile; productRef = 2221331D2B9F42DE00A887D7 /* DungeonsAndDragonsMonstersTestMocks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2221331C2B9F42DE00A887D7 /* ApolloTestSupport in Frameworks */,
+				2221331E2B9F42DE00A887D7 /* DungeonsAndDragonsMonstersTestMocks in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +93,7 @@
 				222132E92B9E83AB00A887D7 /* DungeonsAndDragonsMonstersTests */,
 				222132F32B9E83AB00A887D7 /* DungeonsAndDragonsMonstersUITests */,
 				222132D72B9E83AA00A887D7 /* Products */,
+				2221331A2B9F42DE00A887D7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,6 +153,13 @@
 			path = GraphQL;
 			sourceTree = "<group>";
 		};
+		2221331A2B9F42DE00A887D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -186,6 +198,10 @@
 				222132E82B9E83AB00A887D7 /* PBXTargetDependency */,
 			);
 			name = DungeonsAndDragonsMonstersTests;
+			packageProductDependencies = (
+				2221331B2B9F42DE00A887D7 /* ApolloTestSupport */,
+				2221331D2B9F42DE00A887D7 /* DungeonsAndDragonsMonstersTestMocks */,
+			);
 			productName = DungeonsAndDragonsMonstersTests;
 			productReference = 222132E62B9E83AB00A887D7 /* DungeonsAndDragonsMonstersTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -648,6 +664,16 @@
 		2221330B2B9E8E1F00A887D7 /* DnD5eAPI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DnD5eAPI;
+		};
+		2221331B2B9F42DE00A887D7 /* ApolloTestSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 222133032B9E850100A887D7 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloTestSupport;
+		};
+		2221331D2B9F42DE00A887D7 /* DungeonsAndDragonsMonstersTestMocks */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2221330A2B9E8E1F00A887D7 /* XCLocalSwiftPackageReference "DnD5eAPI" */;
+			productName = DungeonsAndDragonsMonstersTestMocks;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

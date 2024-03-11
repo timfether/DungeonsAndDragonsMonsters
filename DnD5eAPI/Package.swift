@@ -12,6 +12,7 @@ let package = Package(
   ],
   products: [
     .library(name: "DnD5eAPI", targets: ["DnD5eAPI"]),
+    .library(name: "DungeonsAndDragonsMonstersTestMocks", targets: ["DungeonsAndDragonsMonstersTestMocks"]),
   ],
   dependencies: [
     .package(url: "https://github.com/apollographql/apollo-ios.git", from: "1.0.0"),
@@ -23,6 +24,14 @@ let package = Package(
         .product(name: "ApolloAPI", package: "apollo-ios"),
       ],
       path: "./Sources"
+    ),
+    .target(
+      name: "DungeonsAndDragonsMonstersTestMocks",
+      dependencies: [
+        .product(name: "ApolloTestSupport", package: "apollo-ios"),
+        .target(name: "DnD5eAPI"),
+      ],
+      path: "./DungeonsAndDragonsMonstersTestMocks"
     ),
   ]
 )

@@ -9,6 +9,7 @@ import Foundation
 import DnD5eAPI
 import Apollo
 
+/// A protocol to support testability of the ApolloClient; enables fake Apollo clients to be created in test scenarios.
 protocol ApolloClientProviding {
     @discardableResult func fetch<Query: GraphQLQuery>(query: Query,
                                                        cachePolicy: CachePolicy,

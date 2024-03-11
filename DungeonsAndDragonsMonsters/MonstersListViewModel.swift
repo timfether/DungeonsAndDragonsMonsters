@@ -9,9 +9,9 @@ import Foundation
 import DnD5eAPI
 import Apollo
 
-extension Int {
-    fileprivate static var numberOfMonstersToFetchEachTime = 20
-    fileprivate static var numberOfMonstersToHaveRemainingBeforeFetchingMore = 5
+fileprivate extension Int {
+    static var numberOfMonstersToFetchEachTime = 20
+    static var numberOfMonstersToHaveRemainingBeforeFetchingMore = 5
 }
 
 extension MonstersListView {
@@ -24,14 +24,7 @@ extension MonstersListView {
         var numberOfMonstersRequested: Int = 0
         
         init(apolloClient: ApolloClientProviding? = nil) {
-            if let apolloClient {
-                self.apolloClient = apolloClient
-            } else {
-                guard let url = URL(string: "https://www.dnd5eapi.co/graphql") else {
-                    fatalError("Could not create URL to provide to apolloClient")
-                }
-                self.apolloClient = ApolloClient(url: url)
-            }
+            self.apolloClient = apolloClient ?? ApolloClient(url: .baseURLForGraphQL)
             fetchMonsters()
         }
         

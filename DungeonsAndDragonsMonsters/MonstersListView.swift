@@ -10,12 +10,17 @@ import SwiftUI
 struct MonstersListView: View {
     @State private var viewModel = ViewModel()
     
+    @State private var navigationPath = NavigationPath()
+    
     var body: some View {
-        List(viewModel.monsters, id: \.index) { monster in
-            Text(monster.name)
-                .onAppear {
-                    viewModel.rowAppearedForMonster(withIndex: monster.index)
-                }
+        NavigationStack(path: $navigationPath) {
+            List(viewModel.monsters, id: \.index) { monster in
+                Text(monster.name)
+                    .onAppear {
+                        viewModel.rowAppearedForMonster(withIndex: monster.index)
+                    }
+            }
+            .navigationTitle("Monsters")
         }
     }
 }

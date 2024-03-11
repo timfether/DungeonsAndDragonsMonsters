@@ -34,6 +34,9 @@ struct AbilityView: View {
                 .fill(.white)
                 .stroke(.black)
         )
+        .accessibilityElement()
+        .accessibilityLabel(abilityScore.ability.longName)
+        .accessibilityValue(abilityScore.modifierString + ", score: \(abilityScore.score)")
     }
     
 }

@@ -76,6 +76,7 @@ struct MonsterDetailView: View {
             AbilityView(abilityScore: monster.wisdom)
             AbilityView(abilityScore: monster.charisma)
         }
+        .accessibilityElement(children: .contain)
     }
     
     @ViewBuilder

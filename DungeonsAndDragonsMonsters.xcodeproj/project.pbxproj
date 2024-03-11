@@ -24,6 +24,7 @@
 		222133202B9F44C000A887D7 /* ApolloClientProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2221331F2B9F44C000A887D7 /* ApolloClientProviding.swift */; };
 		222133222B9F45D000A887D7 /* MonstersListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222133212B9F45D000A887D7 /* MonstersListViewModelTests.swift */; };
 		222133242B9F49E600A887D7 /* ApolloClient+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222133232B9F49E600A887D7 /* ApolloClient+Mock.swift */; };
+		222133262B9F5D1100A887D7 /* MonsterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222133252B9F5D1100A887D7 /* MonsterDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		2221331F2B9F44C000A887D7 /* ApolloClientProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloClientProviding.swift; sourceTree = "<group>"; };
 		222133212B9F45D000A887D7 /* MonstersListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonstersListViewModelTests.swift; sourceTree = "<group>"; };
 		222133232B9F49E600A887D7 /* ApolloClient+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApolloClient+Mock.swift"; sourceTree = "<group>"; };
+		222133252B9F5D1100A887D7 /* MonsterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				222132D92B9E83AA00A887D7 /* DungeonsAndDragonsMonstersApp.swift */,
 				222133162B9F3CD300A887D7 /* MonstersListView.swift */,
 				222133182B9F3D6800A887D7 /* MonstersListViewModel.swift */,
+				222133252B9F5D1100A887D7 /* MonsterDetailView.swift */,
 				2221331F2B9F44C000A887D7 /* ApolloClientProviding.swift */,
 				222132DD2B9E83AB00A887D7 /* Assets.xcassets */,
 				222132DF2B9E83AB00A887D7 /* Preview Content */,
@@ -317,6 +320,7 @@
 				222132DA2B9E83AA00A887D7 /* DungeonsAndDragonsMonstersApp.swift in Sources */,
 				222133202B9F44C000A887D7 /* ApolloClientProviding.swift in Sources */,
 				222133192B9F3D6800A887D7 /* MonstersListViewModel.swift in Sources */,
+				222133262B9F5D1100A887D7 /* MonsterDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

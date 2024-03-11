@@ -25,7 +25,7 @@ struct MonstersListView: View {
             }
             .navigationTitle("Monsters")
             .navigationDestination(for: MonsterQuery.Data.Monster.self) {
-                Text($0.name)
+                MonsterDetailView(monster: $0)
             }
         }
     }

@@ -11,8 +11,11 @@ struct MonstersListView: View {
     @State private var viewModel = ViewModel()
     
     var body: some View {
-        List(viewModel.monsters, id: \.index) {
-            Text($0.name)
+        List(viewModel.monsters, id: \.index) { monster in
+            Text(monster.name)
+                .onAppear {
+                    viewModel.rowAppearedForMonster(withIndex: monster.index)
+                }
         }
     }
 }

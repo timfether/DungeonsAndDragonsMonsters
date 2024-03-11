@@ -9,12 +9,19 @@ import Foundation
 import DnD5eAPI
 import Apollo
 
+extension Int {
+    fileprivate static var numberOfMonstersToFetchEachTime = 20
+    fileprivate static var numberOfMonstersToHaveRemainingBeforeFetchingMore = 5
+}
+
 extension MonstersListView {
     @Observable class ViewModel {
         var apolloClient: ApolloClientProviding
         
         var monsters = [MonsterQuery.Data.Monster]()
         var fetchError: Error?
+        
+        var numberOfMonstersRequested: Int = 0
         
         init(apolloClient: ApolloClientProviding? = nil) {
             if let apolloClient {
@@ -29,7 +36,7 @@ extension MonstersListView {
         }
         
         func fetchMonsters() {
-            apolloClient.fetch(query: MonsterQuery(limit: 20, skip: 0)) { [weak self] result in
+            apolloClient.fetch(query: MonsterQuery(limit: .numberOfMonstersToFetchEachTime, skip: GraphQLNullable(integerLiteral: numberOfMonstersRequested))) { [weak self] result in
                 guard let self else { return }
                 switch result {
                 case .success(let result):
@@ -37,10 +44,17 @@ extension MonstersListView {
                         self.fetchError = FetchError.noMonstersData
                         return
                     }
-                    self.monsters = monsters
+                    self.monsters += monsters
                 case .failure(let error):
                     self.fetchError = error
                 }
+            }
+            numberOfMonstersRequested += .numberOfMonstersToFetchEachTime
+        }
+        
+        func rowAppearedForMonster(withIndex index: String) {
+            if index == monsters[monsters.endIndex - .numberOfMonstersToHaveRemainingBeforeFetchingMore].index {
+                fetchMonsters()
             }
         }
         

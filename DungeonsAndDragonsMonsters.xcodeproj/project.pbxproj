@@ -127,13 +127,10 @@
 			isa = PBXGroup;
 			children = (
 				222132D92B9E83AA00A887D7 /* DungeonsAndDragonsMonstersApp.swift */,
-				222133162B9F3CD300A887D7 /* MonstersListView.swift */,
-				222133182B9F3D6800A887D7 /* MonstersListViewModel.swift */,
-				222133252B9F5D1100A887D7 /* MonsterDetailView.swift */,
-				2221331F2B9F44C000A887D7 /* ApolloClientProviding.swift */,
-				222133272B9F5E8C00A887D7 /* ApolloUtilities.swift */,
-				222133292B9F669300A887D7 /* Monster+Abilities.swift */,
-				2221332B2B9F66F000A887D7 /* AbilityScore.swift */,
+				222133312B9F6A4100A887D7 /* Model */,
+				2221332F2B9F6A0C00A887D7 /* View */,
+				222133302B9F6A2A00A887D7 /* ViewModel */,
+				222133322B9F6A5400A887D7 /* Apollo */,
 				222132DD2B9E83AB00A887D7 /* Assets.xcassets */,
 				222132DF2B9E83AB00A887D7 /* Preview Content */,
 			);
@@ -182,6 +179,41 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2221332F2B9F6A0C00A887D7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				222133162B9F3CD300A887D7 /* MonstersListView.swift */,
+				222133252B9F5D1100A887D7 /* MonsterDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		222133302B9F6A2A00A887D7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				222133182B9F3D6800A887D7 /* MonstersListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		222133312B9F6A4100A887D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				222133292B9F669300A887D7 /* Monster+Abilities.swift */,
+				2221332B2B9F66F000A887D7 /* AbilityScore.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		222133322B9F6A5400A887D7 /* Apollo */ = {
+			isa = PBXGroup;
+			children = (
+				2221331F2B9F44C000A887D7 /* ApolloClientProviding.swift */,
+				222133272B9F5E8C00A887D7 /* ApolloUtilities.swift */,
+			);
+			path = Apollo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

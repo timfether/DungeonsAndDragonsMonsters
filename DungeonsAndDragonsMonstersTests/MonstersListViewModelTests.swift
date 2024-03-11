@@ -8,8 +8,11 @@
 import XCTest
 @testable import DungeonsAndDragonsMonsters
 import DnD5eAPI
+import Apollo
 
 final class MonstersListViewModelTests: XCTestCase {
+    
+    struct FakeError: Error, Equatable {}
 
     func testViewModelFetchesMonstersWithCorrectQueryOnInit() throws {
         let mockApolloClient = MockApolloClient()
@@ -22,5 +25,31 @@ final class MonstersListViewModelTests: XCTestCase {
         XCTAssertEqual(query.limit, 20)
         XCTAssertEqual(query.skip, 0)
     }
+    
+    func testViewModelCapturesErrorWhenThereIsNoDataInTheResult() {
+        let mockApolloClient = MockApolloClient()
+        let viewModel = MonstersListView.ViewModel(apolloClient: mockApolloClient)
+        guard let handler = mockApolloClient.resultHandlers[0] as? Apollo.GraphQLResultHandler<MonsterQuery.Data> else {
+            XCTFail("Unexpected result handler type")
+            return
+        }
+        handler(.success(GraphQLResult(data: nil, extensions: nil, errors: nil, source: .cache, dependentKeys: nil)))
+        
+        XCTAssertEqual(viewModel.monsters, [])
+        XCTAssertEqual(viewModel.fetchError as? MonstersListView.ViewModel.FetchError, MonstersListView.ViewModel.FetchError.noMonstersData)
+    }
 
+    func testViewModelCapturesErrorWhenFetchFails() {
+        let mockApolloClient = MockApolloClient()
+        let viewModel = MonstersListView.ViewModel(apolloClient: mockApolloClient)
+        guard let handler = mockApolloClient.resultHandlers[0] as? Apollo.GraphQLResultHandler<MonsterQuery.Data> else {
+            XCTFail("Unexpected result handler type")
+            return
+        }
+        handler(.failure(FakeError()))
+        
+        XCTAssertEqual(viewModel.monsters, [])
+        XCTAssertEqual(viewModel.fetchError as? FakeError, FakeError())
+    }
+    
 }

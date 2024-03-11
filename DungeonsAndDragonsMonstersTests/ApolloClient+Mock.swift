@@ -13,9 +13,16 @@ import ApolloAPI
 class MockApolloClient: ApolloClientProviding {
     
     var queriesFetched = [any ApolloAPI.GraphQLQuery]()
+    var resultHandlers = [Any]()
     
-    func fetch<Query>(query: Query, cachePolicy: Apollo.CachePolicy, contextIdentifier: UUID?, context: Apollo.RequestContext?, queue: DispatchQueue, resultHandler: Apollo.GraphQLResultHandler<Query.Data>?) -> Apollo.Cancellable where Query : ApolloAPI.GraphQLQuery {
+    func fetch<Query>(query: Query, 
+                      cachePolicy: Apollo.CachePolicy,
+                      contextIdentifier: UUID?,
+                      context: Apollo.RequestContext?,
+                      queue: DispatchQueue,
+                      resultHandler: Apollo.GraphQLResultHandler<Query.Data>?) -> Apollo.Cancellable where Query : ApolloAPI.GraphQLQuery {
         queriesFetched += [query]
+        resultHandlers += [ resultHandler]
         return EmptyCancellable()
     }
 }

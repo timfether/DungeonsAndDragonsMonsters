@@ -14,6 +14,7 @@ extension MonstersListView {
         var apolloClient: ApolloClientProviding
         
         var monsters = [MonsterQuery.Data.Monster]()
+        var fetchError: Error?
         
         init(apolloClient: ApolloClientProviding? = nil) {
             if let apolloClient {
@@ -28,7 +29,23 @@ extension MonstersListView {
         }
         
         func fetchMonsters() {
-            apolloClient.fetch(query: MonsterQuery(limit: 20, skip: 0))
+            apolloClient.fetch(query: MonsterQuery(limit: 20, skip: 0)) { [weak self] result in
+                guard let self else { return }
+                switch result {
+                case .success(let result):
+                    guard let monsters = result.data?.monsters else {
+                        self.fetchError = FetchError.noMonstersData
+                        return
+                    }
+                    self.monsters = monsters
+                case .failure(let error):
+                    self.fetchError = error
+                }
+            }
+        }
+        
+        enum FetchError: Error {
+            case noMonstersData
         }
     }
 }

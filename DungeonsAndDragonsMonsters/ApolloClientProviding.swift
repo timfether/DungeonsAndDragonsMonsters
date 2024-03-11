@@ -17,17 +17,17 @@ protocol ApolloClientProviding {
                                                        queue: DispatchQueue,
                                                        resultHandler: GraphQLResultHandler<Query.Data>?) -> Cancellable
     
-    @discardableResult func fetch<Query: GraphQLQuery>(query: Query) -> Cancellable
+    @discardableResult func fetch<Query: GraphQLQuery>(query: Query, resultHandler: GraphQLResultHandler<Query.Data>?) -> Cancellable
 }
 
 extension ApolloClientProviding {
-    @discardableResult func fetch<Query: GraphQLQuery>(query: Query) -> Cancellable {
+    @discardableResult func fetch<Query: GraphQLQuery>(query: Query, resultHandler: GraphQLResultHandler<Query.Data>?) -> Cancellable {
         return fetch(query: query,
                      cachePolicy: .default,
                      contextIdentifier: nil,
                      context: nil,
                      queue: .main,
-                     resultHandler: nil)
+                     resultHandler: resultHandler)
     }
 }
 

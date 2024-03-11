@@ -22,6 +22,23 @@ struct MonsterDetailView: View {
                     abilitiesView
                         .fixedSize()
                     VStack(alignment: .leading, spacing: 8.0) {
+                        Grid(alignment: .leading, horizontalSpacing: 16.0) {
+                            GridRow {
+                                Text("Alignment")
+                                    .bold()
+                                Text(monster.alignment.capitalized)
+                            }
+                            GridRow {
+                                Text("Size")
+                                    .bold()
+                                Text(monster.size.rawValue.capitalized)
+                            }
+                            GridRow {
+                                Text("Type")
+                                    .bold()
+                                Text(monster.type.rawValue.capitalized)
+                            }
+                        }
                         if let description = monster.description {
                             Text(description)
                         }

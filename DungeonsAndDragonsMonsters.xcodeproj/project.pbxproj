@@ -14,6 +14,7 @@
 		222132EB2B9E83AB00A887D7 /* DungeonsAndDragonsMonstersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222132EA2B9E83AB00A887D7 /* DungeonsAndDragonsMonstersTests.swift */; };
 		222132F52B9E83AB00A887D7 /* DungeonsAndDragonsMonstersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222132F42B9E83AB00A887D7 /* DungeonsAndDragonsMonstersUITests.swift */; };
 		222132F72B9E83AB00A887D7 /* DungeonsAndDragonsMonstersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222132F62B9E83AB00A887D7 /* DungeonsAndDragonsMonstersUITestsLaunchTests.swift */; };
+		222133052B9E850100A887D7 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 222133042B9E850100A887D7 /* Apollo */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				222133052B9E850100A887D7 /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +145,9 @@
 			dependencies = (
 			);
 			name = DungeonsAndDragonsMonsters;
+			packageProductDependencies = (
+				222133042B9E850100A887D7 /* Apollo */,
+			);
 			productName = DungeonsAndDragonsMonsters;
 			productReference = 222132D62B9E83AA00A887D7 /* DungeonsAndDragonsMonsters.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +220,9 @@
 				Base,
 			);
 			mainGroup = 222132CD2B9E83AA00A887D7;
+			packageReferences = (
+				222133032B9E850100A887D7 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+			);
 			productRefGroup = 222132D72B9E83AA00A887D7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -588,6 +596,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		222133032B9E850100A887D7 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		222133042B9E850100A887D7 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 222133032B9E850100A887D7 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 222132CE2B9E83AA00A887D7 /* Project object */;
 }

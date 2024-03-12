@@ -15,8 +15,8 @@ public class Monster: MockObject {
     @Field<Int>("constitutionScore") public var constitutionScore
     @Field<String>("description") public var description
     @Field<Int>("dexterityScore") public var dexterityScore
+    @Field<String>("id") public var id
     @Field<String>("imagePath") public var imagePath
-    @Field<String>("index") public var index
     @Field<Int>("intelligenceScore") public var intelligenceScore
     @Field<String>("name") public var name
     @Field<GraphQLEnum<DnD5eAPI.Size>>("size") public var size
@@ -33,8 +33,8 @@ public extension Mock where O == Monster {
     constitutionScore: Int? = nil,
     description: String? = nil,
     dexterityScore: Int? = nil,
+    id: String? = nil,
     imagePath: String? = nil,
-    index: String? = nil,
     intelligenceScore: Int? = nil,
     name: String? = nil,
     size: GraphQLEnum<DnD5eAPI.Size>? = nil,
@@ -48,8 +48,8 @@ public extension Mock where O == Monster {
     _setScalar(constitutionScore, for: \.constitutionScore)
     _setScalar(description, for: \.description)
     _setScalar(dexterityScore, for: \.dexterityScore)
+    _setScalar(id, for: \.id)
     _setScalar(imagePath, for: \.imagePath)
-    _setScalar(index, for: \.index)
     _setScalar(intelligenceScore, for: \.intelligenceScore)
     _setScalar(name, for: \.name)
     _setScalar(size, for: \.size)

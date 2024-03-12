@@ -15,11 +15,11 @@ struct MonstersListView: View {
     
     var body: some View {
         NavigationStack(path: $navigationPath) {
-            List(viewModel.monsters, id: \.index) { monster in
+            List(viewModel.monsters, id: \.id) { monster in
                 NavigationLink(value: monster) {
                     Text(monster.name)
                         .onAppear {
-                            viewModel.rowAppearedForMonster(withIndex: monster.index)
+                            viewModel.rowAppearedForMonster(withID: monster.id)
                         }
                 }
                 .listRowBackground(AppColor.background)

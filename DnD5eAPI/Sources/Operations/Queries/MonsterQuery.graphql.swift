@@ -7,7 +7,7 @@ public class MonsterQuery: GraphQLQuery {
   public static let operationName: String = "MonsterQuery"
   public static let operationDocument: ApolloAPI.OperationDocument = .init(
     definition: .init(
-      #"query MonsterQuery($limit: Int!, $skip: Int) { monsters(limit: $limit, skip: $skip) { __typename index name imagePath: image strengthScore: strength dexterityScore: dexterity constitutionScore: constitution intelligenceScore: intelligence wisdomScore: wisdom charismaScore: charisma description: desc alignment size type } }"#
+      #"query MonsterQuery($limit: Int!, $skip: Int) { monsters(limit: $limit, skip: $skip) { __typename id: index name imagePath: image strengthScore: strength dexterityScore: dexterity constitutionScore: constitution intelligenceScore: intelligence wisdomScore: wisdom charismaScore: charisma description: desc alignment size type } }"#
     ))
 
   public var limit: Int
@@ -50,7 +50,7 @@ public class MonsterQuery: GraphQLQuery {
       public static var __parentType: ApolloAPI.ParentType { DnD5eAPI.Objects.Monster }
       public static var __selections: [ApolloAPI.Selection] { [
         .field("__typename", String.self),
-        .field("index", String.self),
+        .field("index", alias: "id", String.self),
         .field("name", String.self),
         .field("image", alias: "imagePath", String?.self),
         .field("strength", alias: "strengthScore", Int.self),
@@ -65,7 +65,7 @@ public class MonsterQuery: GraphQLQuery {
         .field("type", GraphQLEnum<DnD5eAPI.MonsterType>.self),
       ] }
 
-      public var index: String { __data["index"] }
+      public var id: String { __data["id"] }
       public var name: String { __data["name"] }
       public var imagePath: String? { __data["imagePath"] }
       public var strengthScore: Int { __data["strengthScore"] }

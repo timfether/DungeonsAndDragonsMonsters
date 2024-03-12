@@ -1,6 +1,6 @@
 query MonsterQuery($limit: Int!, $skip: Int) {
   monsters(limit: $limit, skip: $skip) {
-    index
+    id: index
     name
     imagePath: image
 

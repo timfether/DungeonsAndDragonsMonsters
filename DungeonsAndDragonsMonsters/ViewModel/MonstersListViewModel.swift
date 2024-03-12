@@ -47,12 +47,12 @@ extension MonstersListView {
             numberOfMonstersRequested += .numberOfMonstersToFetchEachTime
         }
         
-        func rowAppearedForMonster(withIndex uniqueIdentifyingindex: String) {
-            guard let integerIndexOfMonsterThatAppeared = monsters.firstIndex(where: { $0.index == uniqueIdentifyingindex }) else {
+        func rowAppearedForMonster(withID id: String) {
+            guard let index = monsters.firstIndex(where: { $0.id == id }) else {
                 assertionFailure("monster with provided index should exist")
                 return
             }
-            if integerIndexOfMonsterThatAppeared >= numberOfMonstersRequested - .numberOfMonstersToHaveRemainingBeforeFetchingMore - 1 {
+            if index >= numberOfMonstersRequested - .numberOfMonstersToHaveRemainingBeforeFetchingMore - 1 {
                 fetchMonsters()
             }
         }

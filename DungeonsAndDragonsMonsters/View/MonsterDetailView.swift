@@ -34,7 +34,9 @@ struct MonsterDetailView: View {
         .containerRelativeFrame(.horizontal)
     }
     
-    var placeholderImage: some View {
+    // MARK: - Image
+    
+    private var placeholderImage: some View {
         Image(systemName: "photo")
             .resizable()
             .scaledToFit()
@@ -42,7 +44,7 @@ struct MonsterDetailView: View {
     }
     
     @ViewBuilder
-    var monsterImage: some View {
+    private var monsterImage: some View {
         if let imageURL = URL.urlForImage(forMonster: monster) {
             AsyncImage(url: imageURL) { image in
                 image
@@ -66,7 +68,9 @@ struct MonsterDetailView: View {
         }
     }
     
-    var abilitiesView: some View {
+    // MARK: - Statistics
+    
+    private var abilitiesView: some View {
         return VStack(spacing: 4.0) {
             AbilityView(abilityScore: monster.strength)
             AbilityView(abilityScore: monster.dexterity)
@@ -79,7 +83,7 @@ struct MonsterDetailView: View {
     }
     
     @ViewBuilder
-    var statisticsView: some View {
+    private var statisticsView: some View {
         abilitiesView
             .fixedSize()
         VStack(alignment: .leading, spacing: 8.0) {

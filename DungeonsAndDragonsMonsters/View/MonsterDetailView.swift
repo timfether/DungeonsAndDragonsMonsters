@@ -58,12 +58,12 @@ struct MonsterDetailView: View {
             .frame(height: .imageHeight)
         } else {
             ZStack {
-                Color(UIColor(white: 0.9, alpha: 1.0))
+                Color(UIColor(white: 0.0, alpha: 0.15))
                 VStack {
                     placeholderImage
                     Text("No Image", comment: "Text shown in place of an image (alongside a placeholder icon) to indicate that there is no image available for the selected monster")
                 }
-                .foregroundStyle(Color(UIColor(white: 0.5, alpha: 1.0)))
+                .foregroundStyle(Color(UIColor(white: 0.3, alpha: 1.0)))
             }
             .frame(height: .imageHeight)
         }

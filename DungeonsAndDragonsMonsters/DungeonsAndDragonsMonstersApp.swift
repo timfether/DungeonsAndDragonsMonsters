@@ -12,6 +12,7 @@ struct DungeonsAndDragonsMonstersApp: App {
     var body: some Scene {
         WindowGroup {
             MonstersListView()
+                .preferredColorScheme(.light)
         }
     }
 }

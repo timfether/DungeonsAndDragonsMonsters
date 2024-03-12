@@ -31,6 +31,9 @@ struct DungeonsAndDragonsMonstersApp: App {
         appearance.titleTextAttributes = textAttributes(withSize: titleFontSize, forTextStyle: .title1)
         appearance.backButtonAppearance.normal.titleTextAttributes = textAttributes(withSize: UIFont.systemFontSize + 4.0, forTextStyle: .body)
         
+        appearance.setBackIndicatorImage(UIImage(systemName: "arrow.backward"),
+                                         transitionMaskImage: UIImage(systemName: "arrow.backward"))
+        
         UINavigationBar.appearance().standardAppearance = appearance
     }
     

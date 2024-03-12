@@ -2,6 +2,8 @@
 
 This project uses the GraphQL [D&D 5e API](https://www.dnd5eapi.co/docs/) to present a list of monsters, and provides details about a monster when the user selects it. It serves as a demonstration of the author's iOS development skills, particularly focusing on SwiftUI development. The following sections provide a tour of the codebase, highlighting key areas that showcase expertise in SwiftUI implementation and discussing the rationale behind a few of the design decisions and trade-offs.
 
+![Screenshots of the app](READMEImages/screenshots.png)
+
 ## View and View Model
 
 View code is kept clean and light. Both `MonsterListView` and `MonsterDetailView` have `body`s that are light, organized, and easy to follow.
@@ -52,6 +54,8 @@ The [test for pagination](https://github.com/timfether/DungeonsAndDragonsMonster
 `MonsterDetailView` [makes use of `ViewThatFits`](https://github.com/timfether/DungeonsAndDragonsMonsters/blob/main/DungeonsAndDragonsMonsters/View/MonsterDetailView.swift#L21) to adapt to the available space.
 
 [AbilityView](https://github.com/timfether/DungeonsAndDragonsMonsters/blob/main/DungeonsAndDragonsMonsters/View/AbilityView.swift) demonstrates a more complex layout to simulate how ability scores appear on a character sheet.
+
+![Ability score view compared with ability score on character sheet](READMEImages/ability-score-view.png)
 
 ## Accessibility
 

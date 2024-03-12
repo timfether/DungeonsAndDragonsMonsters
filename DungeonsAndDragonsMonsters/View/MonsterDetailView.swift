@@ -33,7 +33,6 @@ struct MonsterDetailView: View {
         .navigationTitle(monster.name)
         .containerRelativeFrame(.horizontal)
         .background { (Color("BackgroundColor")).ignoresSafeArea() }
-        .toolbarBackground(AppColor.bar, for: .navigationBar)
     }
     
     // MARK: - Image

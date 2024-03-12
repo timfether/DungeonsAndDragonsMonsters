@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+fileprivate extension String {
+    static var fontName = "Thonburi"
+}
+
 struct AbilityView: View {
     
     let abilityScore: AbilityScore
@@ -14,11 +18,11 @@ struct AbilityView: View {
     var body: some View {
         VStack {
             Text(abilityScore.ability.longName.uppercased())
-                .font(.caption)
+                .font(.custom(.fontName, size: 12.0))
             Text(abilityScore.modifierString)
-                .font(.headline)
+                .font(.custom(.fontName, size: 18.0)).bold()
             Text(String(abilityScore.score))
-                .font(.caption)
+                .font(.custom(.fontName, size: 12.0))
                 .background(
                     Ellipse()
                         .fill(AppColor.background)

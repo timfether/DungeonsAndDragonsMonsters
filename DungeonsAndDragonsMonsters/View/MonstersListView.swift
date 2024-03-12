@@ -30,7 +30,6 @@ struct MonstersListView: View {
             .navigationDestination(for: MonsterQuery.Data.Monster.self) {
                 MonsterDetailView(monster: $0)
             }
-            .toolbarBackground(AppColor.bar, for: .navigationBar)
         }
     }
 }

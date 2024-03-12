@@ -1,0 +1,41 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@, score: %lld" : {
+      "comment" : "Screen reader value, reading the ability modifier, then the ability score",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@, score: %2$lld"
+          }
+        }
+      }
+    },
+    "Alignment" : {
+      "comment" : "Label for monster's alignment"
+    },
+    "Monsters (screen title)" : {
+      "comment" : "Title of the screen showing the list of monsters",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Monsters"
+          }
+        }
+      }
+    },
+    "No Image" : {
+      "comment" : "Text shown in place of an image (alongside a placeholder icon) to indicate that there is no image available for the selected monster"
+    },
+    "Size" : {
+      "comment" : "Label for monster's size"
+    },
+    "Type" : {
+      "comment" : "Label for monster's type (e.g. humanoid, beast, etc.)"
+    }
+  },
+  "version" : "1.0"
+}

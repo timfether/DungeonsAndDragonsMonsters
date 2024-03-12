@@ -60,7 +60,7 @@ struct MonsterDetailView: View {
                 Color(UIColor(white: 0.9, alpha: 1.0))
                 VStack {
                     placeholderImage
-                    Text("No Image")
+                    Text("No Image", comment: "Text shown in place of an image (alongside a placeholder icon) to indicate that there is no image available for the selected monster")
                 }
                 .foregroundStyle(Color(UIColor(white: 0.5, alpha: 1.0)))
             }
@@ -106,9 +106,14 @@ struct MonsterDetailView: View {
 
     private var statisticsConfiguration: [(label: String, value: String)] {
         return [
-            ("Alignment", monster.alignment.capitalized),
-            ("Size", monster.size.rawValue.capitalized),
-            ("Type", monster.type.rawValue.capitalized)
+            (String(localized: "Alignment", comment: "Label for monster's alignment"),
+             monster.alignment.capitalized),
+            
+            (String(localized: "Size", comment: "Label for monster's size"),
+             monster.size.rawValue.capitalized),
+            
+            (String(localized: "Type", comment: "Label for monster's type (e.g. humanoid, beast, etc.)"),
+             monster.type.rawValue.capitalized)
         ]
     }
     

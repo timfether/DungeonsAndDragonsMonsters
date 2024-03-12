@@ -15,9 +15,9 @@ struct AbilityView: View {
         VStack {
             Text(abilityScore.ability.longName.uppercased())
                 .font(.caption)
-            Text("\(abilityScore.modifierString)")
+            Text(abilityScore.modifierString)
                 .font(.headline)
-            Text("\(abilityScore.score)")
+            Text(String(abilityScore.score))
                 .font(.caption)
                 .background(
                     Ellipse()
@@ -36,7 +36,7 @@ struct AbilityView: View {
         )
         .accessibilityElement()
         .accessibilityLabel(abilityScore.ability.longName)
-        .accessibilityValue(abilityScore.modifierString + ", score: \(abilityScore.score)")
+        .accessibilityValue(String(localized: "\(abilityScore.modifierString), score: \(abilityScore.score)", comment: "Screen reader value, reading the ability modifier, then the ability score"))
     }
     
 }

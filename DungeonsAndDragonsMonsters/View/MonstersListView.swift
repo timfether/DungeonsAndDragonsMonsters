@@ -23,7 +23,7 @@ struct MonstersListView: View {
                         }
                 }
             }
-            .navigationTitle("Monsters")
+            .navigationTitle(String(localized: "Monsters (screen title)", defaultValue: "Monsters", comment: "Title of the screen showing the list of monsters"))
             .navigationDestination(for: MonsterQuery.Data.Monster.self) {
                 MonsterDetailView(monster: $0)
             }

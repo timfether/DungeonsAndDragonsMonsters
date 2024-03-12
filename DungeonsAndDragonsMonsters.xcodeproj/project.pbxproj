@@ -29,6 +29,7 @@
 		2221332C2B9F66F000A887D7 /* AbilityScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2221332B2B9F66F000A887D7 /* AbilityScore.swift */; };
 		2221332E2B9F679300A887D7 /* AbilityScoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2221332D2B9F679300A887D7 /* AbilityScoreTests.swift */; };
 		222133342B9F6A9000A887D7 /* AbilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222133332B9F6A9000A887D7 /* AbilityView.swift */; };
+		222133362BA0847300A887D7 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 222133352BA0847300A887D7 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		2221332B2B9F66F000A887D7 /* AbilityScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityScore.swift; sourceTree = "<group>"; };
 		2221332D2B9F679300A887D7 /* AbilityScoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityScoreTests.swift; sourceTree = "<group>"; };
 		222133332B9F6A9000A887D7 /* AbilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityView.swift; sourceTree = "<group>"; };
+		222133352BA0847300A887D7 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				222133302B9F6A2A00A887D7 /* ViewModel */,
 				222133322B9F6A5400A887D7 /* Apollo */,
 				222132DD2B9E83AB00A887D7 /* Assets.xcassets */,
+				222133352BA0847300A887D7 /* Localizable.xcstrings */,
 				222132DF2B9E83AB00A887D7 /* Preview Content */,
 			);
 			path = DungeonsAndDragonsMonsters;
@@ -333,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				222132E12B9E83AB00A887D7 /* Preview Assets.xcassets in Resources */,
+				222133362BA0847300A887D7 /* Localizable.xcstrings in Resources */,
 				222133142B9F36DB00A887D7 /* Monster.graphql in Resources */,
 				222133152B9F36DB00A887D7 /* schema.graphqls in Resources */,
 				222132DE2B9E83AB00A887D7 /* Assets.xcassets in Resources */,

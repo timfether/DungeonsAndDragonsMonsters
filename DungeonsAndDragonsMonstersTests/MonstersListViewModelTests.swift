@@ -69,21 +69,21 @@ final class MonstersListViewModelTests: XCTestCase {
             
             viewModel.monsters = (1...20).map {
                 let monsterMock = Mock<Monster>()
-                monsterMock.index = "\($0)"
+                monsterMock.id = "\($0)"
                 return MonsterQuery.Data.Monster.from(monsterMock)
             }
         }
         
         XCTContext.runActivity(named: "Simulate scroll through first few items, which should not trigger an additional fetch") { _ in
             for i in (1...15) {
-                viewModel.rowAppearedForMonster(withIndex: "\(i)")
+                viewModel.rowAppearedForMonster(withID: "\(i)")
                 XCTAssertEqual(mockApolloClient.queriesFetched.count, 1)
             }
         }
         
         XCTContext.runActivity(named: "Simulate scrolling to the item that should trigger the first additional fetch") { _ in
             
-            viewModel.rowAppearedForMonster(withIndex: "\(16)")
+            viewModel.rowAppearedForMonster(withID: "\(16)")
             XCTAssertEqual(mockApolloClient.queriesFetched.count, 2)
             
             guard let query = mockApolloClient.queriesFetched[1] as? MonsterQuery else {
@@ -95,20 +95,20 @@ final class MonstersListViewModelTests: XCTestCase {
             
             viewModel.monsters += (21...40).map {
                 let monsterMock = Mock<Monster>()
-                monsterMock.index = "\($0)"
+                monsterMock.id = "\($0)"
                 return MonsterQuery.Data.Monster.from(monsterMock)
             }
         }
         
         XCTContext.runActivity(named: "Simulate scrolling through items which should not trigger an additional fetch") { _ in
             for i in (17...35) {
-                viewModel.rowAppearedForMonster(withIndex: "\(i)")
+                viewModel.rowAppearedForMonster(withID: "\(i)")
                 XCTAssertEqual(mockApolloClient.queriesFetched.count, 2)
             }
         }
         
         XCTContext.runActivity(named: "Simulate scrolling to the item that should trigger the second additional fetch") { _ in
-            viewModel.rowAppearedForMonster(withIndex: "\(36)")
+            viewModel.rowAppearedForMonster(withID: "\(36)")
             XCTAssertEqual(mockApolloClient.queriesFetched.count, 3)
             
             guard let query = mockApolloClient.queriesFetched[2] as? MonsterQuery else {

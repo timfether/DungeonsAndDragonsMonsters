@@ -52,7 +52,7 @@ extension MonstersListView {
                 assertionFailure("monster with provided index should exist")
                 return
             }
-            if index >= numberOfMonstersRequested - .numberOfMonstersToHaveRemainingBeforeFetchingMore - 1 {
+            if index >= numberOfMonstersRequested - .numberOfMonstersToHaveRemainingBeforeFetchingMore {
                 fetchMonsters()
             }
         }

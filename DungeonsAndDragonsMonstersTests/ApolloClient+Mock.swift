@@ -22,7 +22,7 @@ class MockApolloClient: ApolloClientProviding {
                       queue: DispatchQueue,
                       resultHandler: Apollo.GraphQLResultHandler<Query.Data>?) -> Apollo.Cancellable where Query : ApolloAPI.GraphQLQuery {
         queriesFetched += [query]
-        resultHandlers += [ resultHandler]
+        resultHandlers += [resultHandler]
         return EmptyCancellable()
     }
 }

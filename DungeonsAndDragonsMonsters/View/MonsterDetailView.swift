@@ -20,11 +20,11 @@ struct MonsterDetailView: View {
                 monsterImage
                 ViewThatFits(in: .horizontal) {
                     HStack(alignment: .top, spacing: 20.0) {
-                        statisticsView
+                        statisticsViewContent
                         Spacer()
                     }
                     VStack(alignment: .leading) {
-                        statisticsView
+                        statisticsViewContent
                     }
                 }
                 .padding(.horizontal)
@@ -84,7 +84,7 @@ struct MonsterDetailView: View {
     }
     
     @ViewBuilder
-    private var statisticsView: some View {
+    private var statisticsViewContent: some View {
         abilitiesView
             .fixedSize()
         VStack(alignment: .leading, spacing: 8.0) {
@@ -102,7 +102,6 @@ struct MonsterDetailView: View {
                     .frame(idealWidth: 200.0)
             }
         }
-        
     }
 
     private var statisticsConfiguration: [(label: String, value: String)] {

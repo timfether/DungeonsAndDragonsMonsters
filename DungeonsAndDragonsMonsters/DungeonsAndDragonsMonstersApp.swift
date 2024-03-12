@@ -25,18 +25,19 @@ struct DungeonsAndDragonsMonstersApp: App {
         appearance.backgroundColor = UIColor(named: "BarBackgroundColor")
         
         let largeTitleFontSize = (appearance.largeTitleTextAttributes[NSAttributedString.Key.font] as! UIFont).pointSize
-        appearance.largeTitleTextAttributes = titleTextAttributes(withSize: largeTitleFontSize)
-        
         let titleFontSize = (appearance.titleTextAttributes[NSAttributedString.Key.font] as! UIFont).pointSize + 6.0
-        appearance.titleTextAttributes = titleTextAttributes(withSize: titleFontSize)
+        
+        appearance.largeTitleTextAttributes = textAttributes(withSize: largeTitleFontSize, forTextStyle: .title1)
+        appearance.titleTextAttributes = textAttributes(withSize: titleFontSize, forTextStyle: .title1)
+        appearance.backButtonAppearance.normal.titleTextAttributes = textAttributes(withSize: UIFont.systemFontSize + 4.0, forTextStyle: .body)
         
         UINavigationBar.appearance().standardAppearance = appearance
     }
     
-    private func titleTextAttributes(withSize size: CGFloat) -> [NSAttributedString.Key : Any] {
+    private func textAttributes(withSize size: CGFloat, forTextStyle textStyle: UIFont.TextStyle) -> [NSAttributedString.Key : Any] {
         let font = UIFont(name: "Baskerville-Bold", size: size)!
         return [
-            .font: UIFontMetrics(forTextStyle: .title1).scaledFont(for: font)
+            .font: UIFontMetrics(forTextStyle: textStyle).scaledFont(for: font)
         ]
     }
 }

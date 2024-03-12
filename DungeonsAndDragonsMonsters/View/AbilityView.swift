@@ -21,7 +21,7 @@ struct AbilityView: View {
                 .font(.caption)
                 .background(
                     Ellipse()
-                        .fill(.white)
+                        .fill(AppColor.background)
                         .stroke(.black)
                         .aspectRatio(2.0, contentMode: .fill)
                 )
@@ -31,7 +31,7 @@ struct AbilityView: View {
         .frame(maxWidth: .infinity)
         .background(
             RoundedRectangle(cornerRadius: 5.0)
-                .fill(.white)
+                .fill(AppColor.background)
                 .stroke(.black)
         )
         .accessibilityElement()

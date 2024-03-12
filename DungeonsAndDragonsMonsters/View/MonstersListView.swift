@@ -22,11 +22,15 @@ struct MonstersListView: View {
                             viewModel.rowAppearedForMonster(withIndex: monster.index)
                         }
                 }
+                .listRowBackground(AppColor.background)
             }
+            .listStyle(.plain)
+            .background { AppColor.background.ignoresSafeArea() }
             .navigationTitle(String(localized: "Monsters (screen title)", defaultValue: "Monsters", comment: "Title of the screen showing the list of monsters"))
             .navigationDestination(for: MonsterQuery.Data.Monster.self) {
                 MonsterDetailView(monster: $0)
             }
+            .toolbarBackground(AppColor.bar, for: .navigationBar)
         }
     }
 }

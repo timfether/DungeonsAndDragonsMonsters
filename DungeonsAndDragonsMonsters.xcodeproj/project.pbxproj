@@ -30,6 +30,7 @@
 		2221332E2B9F679300A887D7 /* AbilityScoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2221332D2B9F679300A887D7 /* AbilityScoreTests.swift */; };
 		222133342B9F6A9000A887D7 /* AbilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222133332B9F6A9000A887D7 /* AbilityView.swift */; };
 		222133362BA0847300A887D7 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 222133352BA0847300A887D7 /* Localizable.xcstrings */; };
+		222133382BA093FD00A887D7 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222133372BA093FD00A887D7 /* AppColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		2221332D2B9F679300A887D7 /* AbilityScoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityScoreTests.swift; sourceTree = "<group>"; };
 		222133332B9F6A9000A887D7 /* AbilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityView.swift; sourceTree = "<group>"; };
 		222133352BA0847300A887D7 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		222133372BA093FD00A887D7 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				222132D92B9E83AA00A887D7 /* DungeonsAndDragonsMonstersApp.swift */,
+				222133372BA093FD00A887D7 /* AppColor.swift */,
 				222133312B9F6A4100A887D7 /* Model */,
 				2221332F2B9F6A0C00A887D7 /* View */,
 				222133302B9F6A2A00A887D7 /* ViewModel */,
@@ -365,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				222133172B9F3CD300A887D7 /* MonstersListView.swift in Sources */,
+				222133382BA093FD00A887D7 /* AppColor.swift in Sources */,
 				2221332A2B9F669300A887D7 /* Monster+Abilities.swift in Sources */,
 				222132DA2B9E83AA00A887D7 /* DungeonsAndDragonsMonstersApp.swift in Sources */,
 				222133202B9F44C000A887D7 /* ApolloClientProviding.swift in Sources */,
